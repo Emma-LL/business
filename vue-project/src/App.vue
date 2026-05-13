@@ -1,85 +1,43 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div id="app-wrapper">
+    <!-- 1. TOP MENU -->
+    <nav class="nav-bar top">
+      <div class="logo">MyBrand</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+    </nav>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <!-- 2. MAIN CONTENT (Goal + Image) -->
+    <main class="content-area">
+      <div class="text-container">
+      <h1>Business DE-DK: Styrket erhvervssamarbejde i grænseregionen</h1>
+        <p>Business DE-DK arbejder for at forbedre samarbejdet mellem virksomheder, 
+          institutioner og initiativer i den nordtyske og syddanske grænseregion. Projektet fokuserer 
+          på at optimere erhvervssamarbejdet, tackle manglen på arbejdskraft og gøre regionen mere attraktiv
+          for både virksomheder og talent fra hele verden.
+         
+        </p>
+        <button class="cta-button">Learn More</button>
+      </div>
+      
+      <div class="image-container">
+        <!-- Replace URL with your actual image path -->
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Workspace" />
+      </div>
+    </main>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+    <!-- 3. BOTTOM MENU -->
+    <nav class="nav-bar bottom">
+      <ul class="nav-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <p class="copyright">© 2024 MyBrand Inc.</p>
+    </nav>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
